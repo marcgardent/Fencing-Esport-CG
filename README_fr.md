@@ -18,6 +18,12 @@ Touchez votre adversaire et gérez votre énergie pour marquer `20` points !
 
 ## ✔️ Règles
 
+
+### 🖼️ Vue d'ensemble
+
+![overview](https://github.com/marcgardent/Fencing-Esport-CG/raw/main/dist/fencing-esport-overview.png)
+
+
 ### 🏆 Conditions de victoire
 
 * Marquez plus de points que votre adversaire à la fin du jeu.

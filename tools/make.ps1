@@ -1,7 +1,7 @@
 
 $conf = @(
-    @{source = '$PSScriptRoot/../rules_en.md'; leagues = 3; language='en' }
-    @{source = '$PSScriptRoot/../rules_fr.md'; leagues = 3; language='fr'}
+    @{source = '$PSScriptRoot/../README.md'; leagues = 3; language='en' }
+    @{source = '$PSScriptRoot/../README_fr.md'; leagues = 3; language='fr'}
 )
 
 $ReviewDestination = "$PSScriptRoot/../.review";
