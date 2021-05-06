@@ -1,0 +1,1077 @@
+<div class='statement_back' id='statement_back' style='display:none'></div>
+<div class='statement-body'>
+    <!--
+
+    --><!--
+🤺Fencing Esport
+--><!--
+
+
+-->
+    <div class='statement-summary-new-league-rules'>
+        <!-- warning -->
+        <div class='statement-section statement-warning'>
+            <h2><span class='icon icon-warning'>&nbsp;</span><span> Attention</span></h2>
+            <div class='statement-warning-content'>
+                <p>C'est la dernière ligue avec de nouvelles règles ! Lisez les nouvelles règles dans les sections
+                    vertes.</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- goal -->
+    <div class='statement-section statement-goal'>
+        <h2><span class='icon icon-goal'>&nbsp;</span><span> Le But</span></h2>
+        <div class='statement-goal-content'>
+            <p>Touchez votre adversaire et gérez votre énergie pour marquer
+                <const>20</const>
+                points !
+            </p>
+
+        </div>
+    </div>
+    <!-- rules -->
+    <div class='statement-section statement-rules'>
+        <h2><span class='icon icon-rules'>&nbsp;</span><span> Règles</span></h2>
+        <div class='statement-rules-content'>
+            <div class='statement-victory-conditions'>
+                <div class='icon victory'></div>
+                <div class='blk'>
+                    <div class='title'> Conditions de victoire</div>
+                    <div class='text'>
+                        <ul>
+                            <li>Marquez plus de points que votre adversaire à la fin du jeu.</li>
+                            <li>La victoire est décisive lorsque vous marquez
+                                <const>20</const>
+                                points à au moins
+                                <const>2</const>
+                                points d'écart.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class='statement-lose-conditions'>
+                <div class='icon lose'></div>
+                <div class='blk'>
+                    <div class='title'> Conditions de défaite</div>
+                    <div class='text'>
+                        <ul>
+                            <li>Marquez moins de points que votre adversaire à la fin du jeu.</li>
+                            <li>Dans certains cas, vous perdez la partie et vous êtes <em>disqualifié</em> :
+                                <ul>
+                                    <li>forfait : lorsque vous manquez d'énergie.</li>
+                                    <li>non-combativité : lorsque vous et votre adversaire ne marquez aucun point à la
+                                        fin de la partie - tours
+                                        <const>200</const>
+                                        .
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>problèmes :
+                                <ul>
+                                    <li>vous ne répondez pas en temps voulu -
+                                        <const>50</const>
+                                        ms.
+                                    </li>
+                                    <li>vous écrivez une
+                                        <action>COMMANDE</action>
+                                        invalide.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Dopage : lorsque vous consommez plus de
+                                <const>7</const>
+                                drogues.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class='no-cg-handled'>
+                <h3>🏅 Marquage</h3>
+
+                <p>Trois cas différents :</p>
+                <ul>
+                    <li>La victoire :
+                        <const>1</const>
+                        point
+                    </li>
+                    <li>La défaite :
+                        <const>0</const>
+                        point
+                    </li>
+                    <li>Disqualifié :
+                        <const>1</const>
+                        point
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div class='no-cg-handled'>
+                <h3>Actions</h3>
+
+                <p>Les deux joueurs ne choisissent qu'une seule action simultanément :</p>
+                <ul>
+                    <li>
+                        <action>BREAK</action>
+                        : energy=
+                        <const>+2</const>
+                    </li>
+                    <li>
+                        <action>WALK</action>
+                        : energy=
+                        <const>-1</const>
+                        move=
+                        <const>+20</const>
+                    </li>
+                    <li>
+                        <action>RETREAT</action>
+                        : energy=
+                        <const>-1</const>
+                        move=
+                        <const>-20</const>
+                    </li>
+                    <li>
+                        <action>LUNGE</action>
+                        : energy=
+                        <const>-5</const>
+                        distance=
+                        <const>+40</const>
+                    </li>
+                    <li>
+                        <action>PARRY</action>
+                        : energy=
+                        <const>-2</const>
+                        distance=
+                        <const>-40</const>
+                        energyTransfer=
+                        <const>2</const>
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div class='no-cg-handled'>
+                <h3></h3>
+
+                <ul>
+                    <li>
+                        <action>DOUBLE_WALK</action>
+                        : energy=
+                        <const>-4</const>
+                        move=
+                        <const>+40</const>
+                    </li>
+                    <li>
+                        <action>DOUBLE_RETREAT</action>
+                        : energy=
+                        <const>-4</const>
+                        move=
+                        <const>-30</const>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class='statement-summary-new-league-rules'>
+                <div class='no-cg-handled'>
+                    <h3></h3>
+
+                    <ul>
+                        <li>
+                            <action>LUNGE_DRUG</action>
+                            : energy=
+                            <const>-5</const>
+                            LungeSkill=
+                            <const>+5</const>
+                        </li>
+                        <li>
+                            <action>PARRY_DRUG</action>
+                            : energy=
+                            <const>-5</const>
+                            ParrySkill=
+                            <const>-5</const>
+                        </li>
+                        <li>
+                            <action>ENERGY_MAX_DRUG</action>
+                            : energy=
+                            <const>-5</const>
+                            EnergyMax=
+                            <const>+5</const>
+                        </li>
+                        <li>
+                            <action>WALK_DRUG</action>
+                            : energy=
+                            <const>-5</const>
+                            WalkSkill=
+                            <const>+5</const>
+                        </li>
+                        <li>
+                            <action>RETREAT_DRUG</action>
+                            : energy=
+                            <const>-5</const>
+                            RetreatSkill=
+                            <const>+5</const>
+                        </li>
+                        <li>
+                            <action>DOUBLE_WALK_DRUG</action>
+                            : energy=
+                            <const>-5</const>
+                            DoubleWalkSkill=
+                            <const>+10</const>
+                        </li>
+                        <li>
+                            <action>DOUBLE_RETREAT_DRUG</action>
+                            : energy=
+                            <const>-5</const>
+                            DoubleRetreatSkill=
+                            <const>+10</const>
+                        </li>
+                        <li>
+                            <action>BREAK_DRUG</action>
+                            : energy=
+                            <const>-5</const>
+                            BreakSkill=
+                            <const>+10</const>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class='no-cg-handled'>
+                <h3></h3>
+
+                <p>laissez-moi vous expliquer le comportement de chaque propriété :</p>
+
+
+            </div>
+            <div class='statement-summary-new-league-rules'>
+                <div class='no-cg-handled'>
+                    <h3></h3>
+
+                    <ul>
+                        <li><strong>energy</strong> : consomme ou produit de l'énergie - dans la gamme [0], <var>joueur.EnergyMax</var>].
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class='no-cg-handled'>
+                <h3></h3>
+
+                <ul>
+                    <li><strong>move</strong> : applique un mouvement à votre personnage dans la plage [0], [500].</li>
+                    <li><strong>distance</strong> : applique une attaque ou une défense, lire §Assaut pour plus de
+                        détails.
+                    </li>
+                    <li><strong>energyTransfer</strong> : transfère la quantité de votre adversaire vers vous.</li>
+                </ul>
+
+
+            </div>
+            <div class='statement-summary-new-league-rules'>
+                <div class='no-cg-handled'>
+                    <h3></h3>
+
+                    <ul>
+                        <li><strong>energyMax</strong> : augmente la jauge d'énergie !</li>
+                        <li><strong>breakSkill</strong> : augmente votre récupération - l'énergie produite par
+                            <action>BREAK</action>
+                            .
+                        </li>
+                        <li><strong>lungeSkill</strong> : augmente la distance de fente.</li>
+                        <li><strong>parrySkill</strong> : augmente la distance de la parade.</li>
+                        <li><strong>walkSkill</strong> : augmente le mouvement de la marche.</li>
+                        <li><strong>doubleWalkSkill</strong> : augmente le mouvement de retraite.</li>
+                        <li><strong>doubleWalkSkill</strong> : augmente le mouvement de la marche double.</li>
+                        <li><strong>doubleRetreatSkill</strong> : augmente le mouvement de retraite double.</li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class='no-cg-handled'>
+                <h3>Résolutions</h3>
+
+                <ul>
+                    <li>L'énergie de l'action est consommée ou produite dans tous les cas.</li>
+                    <li>Vous déclarez forfait lorsque vous êtes à court d'énergie.</li>
+                    <li>Les joueurs se replacent quand :
+                        <ul>
+                            <li>ils entrent en collision : <var>myPosition</var> &gt; <var>yourPosition</var></li>
+                            <li>un assaut est réussi.</li>
+                            <li>un joueur est à l'extérieur.</li>
+                        </ul>
+                    </li>
+                    <li>L'adversaire marque
+                        <const>1</const>
+                        point lorsque vous êtes déplacé hors de la piste.
+                    </li>
+                    <li>Les joueurs marquent tous les deux lorsqu'ils touchent simultanément :
+                        <action>LUNGE</action>
+                        Vs
+                        <action>LUNGE</action>
+                        .
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div class='no-cg-handled'>
+                <h3>Assauts</h3>
+
+                <div class='statement-summary-new-league-rules'>
+                    <div class='no-cg-handled'>
+                        <h4>⚠️ Attention</h4>
+
+                        <p>N'oubliez pas ! Changez la formule pour gérer
+                            <action>LungeDistanceSkill</action>
+                            et
+                            <action>ParryDistanceSkill</action>
+                            ...
+                        </p>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class='no-cg-handled'>
+                <h3></h3>
+
+                <p>La résolution des attaques dépend des positions et des distances des
+                    <action>ACTIONS</action>
+                    :
+                </p>
+                <pre><code class="language-speudocode">fn isTouchedWhenLunge(striker:Player, defender:Player) -&gt;
+  Abs(striker.position - defender.position) &gt;= striker.lungeDistance;
+
+
+fn isTouchedWhenLungeParry(striker:Player, defender:Player) -&gt;
+  Abs(striker.position - defender.position) &gt;= striker.lungeDistance + defender.parryDistance;
+</code></pre>
+                <p>deux cas d'utilisation, ci-dessous :</p>
+                <pre><code class="language-speudocode">ILungeAndOpponentDefends = isTouchedWhenLungeParry(me, opponent)
+OpponentLunges = isTouchedWhenLunge(opponent, me)
+</code></pre>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- protocol -->
+    <div class='statement-section statement-protocol'>
+        <h2><span class='icon icon-protocol'>&nbsp;</span><span> Protocole du jeu</span></h2>
+        <div class='statement-protocol-content'>
+            <div class='blk'>
+                <div class='title'> Entrée pour un tour de jeu</div>
+                <div class='text'>
+                    <span class='statement-lineno'> Ligne 1, mes données </span> variables séparées par un espace
+
+                    <p><var>position</var> <var>energy</var> <var>score</var> <var>drugCount</var> <var>energyMax</var>
+                        <var>breakSkill</var> <var>walkSkill</var> <var>doubleWalkSkill</var> <var>retreatSkill</var>
+                        <var>doubleRetreatSkill</var> <var>lungeDistanceSkill</var> <var>parryDistanceSkill</var></p>
+
+
+                    <span class='statement-lineno'> Ligne 2, données de l'adversaire </span> variables séparées par un
+                    espace
+
+                    <p><var>position</var> <var>energy</var> <var>score</var> <var>drugCount</var> <var>energyMax</var>
+                        <var>breakSkill</var> <var>walkSkill</var> <var>doubleWalkSkill</var> <var>retreatSkill</var>
+                        <var>doubleRetreatSkill</var> <var>lungeDistanceSkill</var> <var>parryDistanceSkill</var></p>
+
+
+                </div>
+            </div>
+            <div class='blk'>
+                <div class='title'> Contraintes d'entrée</div>
+                <div class='text'>
+                    <div class='statement-summary-new-league-rules'>
+                        <div class='no-cg-handled'>
+                            <h4></h4>
+
+                            <ul>
+                                <li><var>energy</var>: plage de valeur [
+                                    <const>0</const>
+                                    , <var>player.energyMax</var>], init.
+                                    <const>20</const>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div class='no-cg-handled'>
+                        <h4></h4>
+
+                        <ul>
+                            <li><var>position</var>: plage de valeur[
+                                <const>0</const>
+                                ,
+                                <const>500</const>
+                                ], replacement (moi:
+                                <const>200</const>
+                                , adversaire:
+                                <const>300</const>
+                                )
+                            </li>
+                            <li><var>score</var> : plage de valeur [
+                                <const>0</const>
+                                ,
+                                <const>+∞</const>
+                                ], init.
+                                <const>0</const>
+                                .
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <div class='statement-summary-new-league-rules'>
+                        <div class='no-cg-handled'>
+                            <h4></h4>
+
+                            <ul>
+                                <li><var>drugCount</var> : vous pouvez consommer un maximum de
+                                    <const>7</const>
+                                    drogues ; plage de valeur [
+                                    <const>0</const>
+                                    ,
+                                    <const>7</const>
+                                    ] ; init.
+                                    <const>0</const>
+                                    .
+                                </li>
+                                <li><var>energyMax</var> : init.
+                                    <const>20</const>
+                                    ; augmenté par
+                                    <action>ENERGY_MAX_DRUG</action>
+                                    .
+                                </li>
+                                <li><var>breakSkill</var> : augmentez votre récupération ; l'énergie produite par
+                                    <action>BREAK</action>
+                                    ; augmentée par
+                                    <action>BREAK_DRUG</action>
+                                    .
+                                </li>
+                                <li><var>walkSkill</var> : ajouté au mouvement de la marche ; augmenté par
+                                    <action>WALK_DRUG</action>
+                                    .
+                                </li>
+                                <li><var>doubleWalkSkill</var> : ajouté au mouvement de la double marche ; augmenté par
+                                    <action>DOUBLE_WALK_DRUG</action>
+                                    .
+                                </li>
+                                <li><var>retreatSkill</var> : ajouté au mouvement de retraite ; augmenté par
+                                    <action>RETREAT_DRUG</action>
+                                    .
+                                </li>
+                                <li><var>doubleRetreatSkill</var> : ajouté au mouvement de double retraite ; augmenté de
+                                    <action>DOUBLE_RETRAITE_DRUG</action>
+                                    .
+                                </li>
+                                <li><var>lungeDistanceSkill</var> : ajouté à la distance de fente ; augmenté par
+                                    <action>LUNGE_DRUG</action>
+                                    .
+                                </li>
+                                <li><var>parryDistanceSkill</var> : ajouté à la distance de la parade ; augmenté de
+                                    <action>PARRY_DRUG</action>
+                                    .
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='blk'>
+                <div class='title'> Sortie pour un tour de jeu</div>
+                <div class='text'>
+                    <span class='statement-lineno'> Ligne 1 </span> Une seule chaîne
+
+                    <ul>
+                        <li>
+                            <action>BREAK</action>
+                            : energy=
+                            <const>+2</const>
+                        </li>
+                        <li>
+                            <action>WALK</action>
+                            : energy=
+                            <const>-1</const>
+                            move=
+                            <const>+20</const>
+                        </li>
+                        <li>
+                            <action>RETREAT</action>
+                            : energy=
+                            <const>-1</const>
+                            move=
+                            <const>-20</const>
+                        </li>
+                        <li>
+                            <action>LUNGE</action>
+                            : energy=
+                            <const>-5</const>
+                            distance=
+                            <const>+40</const>
+                        </li>
+                        <li>
+                            <action>PARRY</action>
+                            : energy=
+                            <const>-2</const>
+                            distance=
+                            <const>-40</const>
+                            energyTransfer=
+                            <const>2</const>
+                        </li>
+                    </ul>
+
+                    <div class='no-cg-handled'>
+                        <h5></h5>
+
+                        <ul>
+                            <li>
+                                <action>DOUBLE_WALK</action>
+                                : energy=
+                                <const>-4</const>
+                                move=
+                                <const>+40</const>
+                            </li>
+                            <li>
+                                <action>DOUBLE_RETREAT</action>
+                                : energy=
+                                <const>-4<var>move=</var>-30</const>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <div class='statement-summary-new-league-rules'>
+                        <div class='no-cg-handled'>
+                            <h5></h5>
+
+                            <ul>
+                                <li>
+                                    <action>LUNGE_DRUG</action>
+                                    : energy=
+                                    <const>-5</const>
+                                    LungeSkill=
+                                    <const>+5</const>
+                                </li>
+                                <li>
+                                    <action>PARRY_DRUG</action>
+                                    : energy=
+                                    <const>-5</const>
+                                    ParrySkill=
+                                    <const>-5</const>
+                                </li>
+                                <li>
+                                    <action>ENERGY_MAX_DRUG</action>
+                                    : energy=
+                                    <const>-5</const>
+                                    EnergyMax=
+                                    <const>+5</const>
+                                </li>
+                                <li>
+                                    <action>WALK_DRUG</action>
+                                    : energy=
+                                    <const>-5</const>
+                                    WalkSkill=
+                                    <const>+5</const>
+                                </li>
+                                <li>
+                                    <action>RETREAT_DRUG</action>
+                                    : energy=
+                                    <const>-5</const>
+                                    RetreatSkill=
+                                    <const>+5</const>
+                                </li>
+                                <li>
+                                    <action>DOUBLE_WALK_DRUG</action>
+                                    : energy=
+                                    <const>-5</const>
+                                    DoubleWalkSkill=
+                                    <const>+10</const>
+                                </li>
+                                <li>
+                                    <action>DOUBLE_RETREAT_DRUG</action>
+                                    : energy=
+                                    <const>-5</const>
+                                    DoubleRetreatSkill=
+                                    <const>+10</const>
+                                </li>
+                                <li>
+                                    <action>BREAK_DRUG</action>
+                                    : energy=
+                                    <const>-5</const>
+                                    BreakSkill=
+                                    <const>+10</const>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- default -->
+    <div class='statement-section statement-default'>
+        <h2 style='padding-top:15px'><span>💽 Données brutes</span>
+        </h2>
+        <div class='statement-default-content'>
+
+
+            <div class='no-cg-handled'>
+                <h3>ligue 1+</h3>
+
+                <table class="marked">
+                    <thead>
+                    <tr>
+                        <th>code</th>
+                        <th>energy</th>
+                        <th>energy transfer</th>
+                        <th>move</th>
+                        <th>distance</th>
+                        <th>drug(league3)</th>
+                        <th>league</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <action>BREAK</action>
+                        </td>
+                        <td>
+                            <const>+2</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>1</const>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <action>WALK</action>
+                        </td>
+                        <td>
+                            <const>-1</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>+20</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>1</const>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <action>RETREAT</action>
+                        </td>
+                        <td>
+                            <const>-1</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>-20</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>1</const>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <action>LUNGE</action>
+                        </td>
+                        <td>
+                            <const>-5</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>+40</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>1</const>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <action>PARRY</action>
+                        </td>
+                        <td>
+                            <const>-2</const>
+                        </td>
+                        <td>
+                            <const>2</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>-40</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>1</const>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <div class='no-cg-handled'>
+                <h3>ligue 2+</h3>
+
+                <table class="marked">
+                    <thead>
+                    <tr>
+                        <th>code</th>
+                        <th>energy</th>
+                        <th>energy transfer</th>
+                        <th>move</th>
+                        <th>distance</th>
+                        <th>drug(league3)</th>
+                        <th>league</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <action>DOUBLE_WALK</action>
+                        </td>
+                        <td>
+                            <const>-4</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>+40</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>2</const>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <action>DOUBLE_RETREAT</action>
+                        </td>
+                        <td>
+                            <const>-4</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>-30</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>0</const>
+                        </td>
+                        <td>
+                            <const>2</const>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+            <div class='statement-summary-new-league-rules'>
+                <div class='no-cg-handled'>
+                    <h3>ligue 3+</h3>
+
+                    <table class="marked">
+                        <thead>
+                        <tr>
+                            <th>code</th>
+                            <th>energy</th>
+                            <th>energy transfer</th>
+                            <th>move</th>
+                            <th>distance</th>
+                            <th>drug(league3)</th>
+                            <th>league</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <action>LUNGE_DRUG</action>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>+5</const>
+                            </td>
+                            <td>
+                                <const>3</const>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <action>PARRY_DRUG</action>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>3</const>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <action>ENERGY_MAX_DRUG</action>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>+5</const>
+                            </td>
+                            <td>
+                                <const>3</const>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <action>WALK_DRUG</action>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>+5</const>
+                            </td>
+                            <td>
+                                <const>3</const>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <action>RETREAT_DRUG</action>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>+5</const>
+                            </td>
+                            <td>
+                                <const>3</const>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <action>DOUBLE_WALK_DRUG</action>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>+10</const>
+                            </td>
+                            <td>
+                                <const>3</const>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <action>DOUBLE_RETREAT_DRUG</action>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>+10</const>
+                            </td>
+                            <td>
+                                <const>3</const>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <action>BREAK_DRUG</action>
+                            </td>
+                            <td>
+                                <const>-5</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>0</const>
+                            </td>
+                            <td>
+                                <const>+10</const>
+                            </td>
+                            <td>
+                                <const>3</const>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- default -->
+    <div class='statement-section statement-default'>
+        <h2 style='padding-top:15px'><span>Crédits & Licences</span>
+        </h2>
+        <div class='statement-default-content'>
+
+            <blockquote>
+                <p>Merci aux relecteurs et joueurs de vos contributions.</p>
+            </blockquote>
+            <ul>
+                <li>Ce document est généré par [markdown2cgdoc] (<a
+                        href="https://github.com/marcgardent/markdown2cgdoc">https://github.com/marcgardent/markdown2cgdoc</a>)
+                </li>
+                <li>Ce jeu de puzzle est publié sous la licence suivante : <a
+                        href="https://creativecommons.org/licenses/by-sa/2.0/">Licence CC BY-SA 2.0</a></li>
+            </ul>
+
+
+        </div>
+    </div>
+
+</div>

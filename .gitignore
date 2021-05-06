@@ -1,0 +1,11 @@
+.idea/
+target/
+.settings
+.classpath
+.project
+.vscode
+.draft
+.review
+bin
+Boss.*
+Player*.java

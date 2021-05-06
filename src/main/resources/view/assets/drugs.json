@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "BREAK_DRUG": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 115,
+        "h": 256
+      }
+    },
+    "DOUBLE_RETREAT_DRUG": {
+      "frame": {
+        "x": 116,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 115,
+        "h": 256
+      }
+    },
+    "DOUBLE_WALK_DRUG": {
+      "frame": {
+        "x": 232,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 115,
+        "h": 256
+      }
+    },
+    "ENERGY_MAX_DRUG": {
+      "frame": {
+        "x": 348,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 115,
+        "h": 256
+      }
+    },
+    "LUNGE_DRUG": {
+      "frame": {
+        "x": 0,
+        "y": 257,
+        "w": 115,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 115,
+        "h": 256
+      }
+    },
+    "PARRY_DRUG": {
+      "frame": {
+        "x": 116,
+        "y": 257,
+        "w": 115,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 115,
+        "h": 256
+      }
+    },
+    "RETREAT_DRUG": {
+      "frame": {
+        "x": 232,
+        "y": 257,
+        "w": 115,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 115,
+        "h": 256
+      }
+    },
+    "WALK_DRUG": {
+      "frame": {
+        "x": 348,
+        "y": 257,
+        "w": 115,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 115,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 115,
+        "h": 256
+      }
+    }
+  },
+  "meta": {
+    "app": "https://www.leshylabs.com/apps/sstool/",
+    "version": "Leshy SpriteSheet Tool v0.8.4",
+    "image": "drugs.png",
+    "size": {
+      "w": 463,
+      "h": 513
+    },
+    "scale": 1
+  }
+}
