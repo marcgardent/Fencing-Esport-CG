@@ -21,7 +21,7 @@ Touchez votre adversaire et gérez votre énergie pour marquer `20` points !
 
 ### 🖼️ Vue d'ensemble
 
-  <img src="https://github.com/marcgardent/Fencing-Esport-CG/raw/main/dist/fencing-esport-overview.png" alt="overview" width="100%"/>
+  <img src="https://github.com/marcgardent/Fencing-Esport-CG/raw/main/dist/fencing-esport-overview.png" alt="overview" width="100%" style="width:100%"/>
 
 
 ### 🏆 Conditions de victoire
