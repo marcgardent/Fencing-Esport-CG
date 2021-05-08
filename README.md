@@ -29,7 +29,7 @@ Touch your opponent and manage your energy to score `20` points!
 
 ### 🖼️ Overview of rules
 
-![overview](https://github.com/marcgardent/Fencing-Esport-CG/raw/main/dist/fencing-esport-overview.png)
+  <img src="https://github.com/marcgardent/Fencing-Esport-CG/raw/main/dist/fencing-esport-overview.png" alt="overview" width="100%"/>
 
 ### 🏆 Victory Conditions
 

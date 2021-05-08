@@ -62,28 +62,37 @@
         </dependency>
 
     </dependencies>
-
-    <build>
-    <plugins>
-        <plugin>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>3.0.0</version>
-            <groupId>org.codehaus.mojo</groupId>
-            <executions>
-                <execution>
-                    <!-- Run our version calculation script -->
-                    <id>Renaming build artifacts</id>
-                    <phase>compile</phase>
-                    <goals>
-                        <goal>exec</goal>
-                    </goals>
-                    <configuration>
-                        <executable>pwsh</executable>
-                        <commandlineArgs>tools/make.ps1</commandlineArgs>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-    </build>
+    <profiles>
+    <profile>
+        <id>windows</id>
+        <activation>
+            <os>
+                <family>windows</family>
+            </os>
+        </activation>
+        <build>
+            <plugins>
+                <plugin>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <executions>
+                        <execution>
+                            <!-- Run our version calculation script -->
+                            <id>Renaming build artifacts</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>exec</goal>
+                            </goals>
+                            <configuration>
+                                <executable>pwsh</executable>
+                                <commandlineArgs>tools/make.ps1</commandlineArgs>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+    </profiles>
 </project>
