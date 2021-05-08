@@ -28,8 +28,6 @@ public class TeamView {
     private Group drugSlots;
     private int drugOrientation;
     private Text bioPassport;
-    private Polygon light;
-
 
     public TeamView init(TeamModel teamState, Player player) {
         this.teamModel = teamState;
@@ -52,7 +50,7 @@ public class TeamView {
         Text text = g.createText(player.getNicknameToken())
                 .setX(150).setY(30)
                 .setFontSize(60)
-                .setFillColor(Colors.WHITE)
+                .setFillColor(Colors.STROKE)
                 .setFontWeight(Text.FontWeight.BOLD);
 
         this.playerBlock = g.createGroup(avatar, light, text).setZIndex(20).setAlpha(0.5);
@@ -62,8 +60,7 @@ public class TeamView {
 
     public void restart() {
         this.playerBlock.setAlpha(0.5);
-        this.light.setAlpha(0.1);
-        g.commitEntityState(1, this.playerBlock, this.light);
+        g.commitEntityState(1, this.playerBlock);
         playerView.restartPlayer();
     }
 
@@ -88,9 +85,9 @@ public class TeamView {
     public TeamView addScoreUI(int x, int y) {
         this.score = g.createText("00")
                 .setFontFamily("Lato").setFontSize(80)
-                .setX(5).setY(5).setFillColor(Colors.WHITE).setZIndex(20);
+                .setX(5).setY(5).setFillColor(Colors.STROKE).setZIndex(20);
 
-        Rectangle rect = g.createRectangle().setFillAlpha(0).setLineColor(Colors.WHITE).setLineWidth(3)
+        Rectangle rect = g.createRectangle().setFillAlpha(0).setLineColor(Colors.STROKE).setLineWidth(3)
                 .setX(0).setY(0).setWidth(100).setHeight(100);
 
         g.createGroup(this.score, rect).setX(x).setY(y);
@@ -106,7 +103,7 @@ public class TeamView {
 
     public TeamView addBioPassport(int x, int y) {
 
-        bioPassport = g.createText("").setX(x).setY(y).setFillColor(Colors.WHITE).setFontSize(40);
+        bioPassport = g.createText("").setX(x).setY(y).setFillColor(Colors.FILL).setFontSize(40);
         updateBioPassport();
         toggleModule.displayOnToggleState(bioPassport, "variables", true);
 
@@ -160,27 +157,4 @@ public class TeamView {
         return this;
     }
 
-    public void scored() {
-        this.playerBlock.setAlpha(0.2);
-        this.light.setAlpha(0.2);
-        g.commitEntityState(0.25, this.playerBlock, this.light);
-
-        this.playerBlock.setAlpha(1);
-        this.light.setAlpha(1);
-        g.commitEntityState(0.5, this.playerBlock, this.light);
-
-        this.playerBlock.setAlpha(0.2);
-        this.light.setAlpha(0.2);
-        g.commitEntityState(0.75, this.playerBlock, this.light);
-
-        this.playerBlock.setAlpha(1);
-        this.light.setAlpha(1);
-        g.commitEntityState(1, this.playerBlock, this.light);
-    }
-
-    public TeamView setLight(Polygon light) {
-        this.light = light;
-        light.setFillColor(color).setAlpha(0);
-        return this;
-    }
 }

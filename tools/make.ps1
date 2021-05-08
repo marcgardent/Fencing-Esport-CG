@@ -9,5 +9,5 @@ $ReleaseDestination = "$PSScriptRoot/../config";
 
 $conf | % {
     $source = $_.source;
-    . "$PSScriptRoot/markdown2cg.ps1" -Source $source -ReviewDestination $ReviewDestination -ReleaseDestination $ReleaseDestination -Leagues $_.leagues -Language $_.language;
+    . "$PSScriptRoot/markdown2cgdoc.ps1" -Source $source -ReviewDestination $ReviewDestination -ReleaseDestination $ReleaseDestination -Leagues $_.leagues -Language $_.language;
 }

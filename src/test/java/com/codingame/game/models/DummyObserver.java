@@ -8,7 +8,7 @@ class DummyObserver implements MatchObserver {
     }
 
     @Override
-    public void scored(TeamModel team) {
+    public void touched(boolean teamA, boolean teamB) {
 
     }
 

@@ -32,7 +32,6 @@ public class MainView {
         this.model = model;
         stage.init();
         aView.init(model.teamA, playerA)
-                .setLight(stage.getLightA())
                 .addScoreUI(StageView.HALF_WIDTH - 110, StageView.LINE - 400)
                 .addEnergyBarUI(StageView.HALF_WIDTH - (TeamView.ENERGY_BAR_SIZE + 20), StageView.LINE - 290)
                 .setPlayerBlock(0, StageView.LINE + 60)
@@ -41,7 +40,6 @@ public class MainView {
                 .addBioPassport(10, 10);
 
         bView.init(model.teamB, playerB)
-                .setLight(stage.getLightB())
                 .addScoreUI(StageView.HALF_WIDTH + 10, StageView.LINE - 400)
                 .addEnergyBarUI(StageView.HALF_WIDTH + 10, StageView.LINE - 290)
                 .setPlayerBlock(StageView.HALF_WIDTH, StageView.LINE + 60)
@@ -73,7 +71,6 @@ public class MainView {
         aView.restart();
         bView.restart();
         stage.reset();
-
         if (model.teamA.player.touched && model.teamB.player.touched) {
             stage.addMessage("Touchés");
         } else if (model.teamA.player.touched || model.teamB.player.touched) {
@@ -91,7 +88,6 @@ public class MainView {
 
     }
 
-
     public void playerKo(PlayerModel player) {
         viewByPlayer.get(player).playerView.playerKo();
     }
@@ -100,15 +96,21 @@ public class MainView {
         viewByPlayer.get(player).playerView.energyChanged(delta);
     }
 
-    public void scored(TeamModel team) {
-        viewByTeam.get(team).scored();
-    }
-
     public void defended(PlayerModel player, boolean succeeded) {
         viewByPlayer.get(player).playerView.defended(succeeded);
     }
 
     public void doped(PlayerModel player, ActionType a) {
         viewByPlayer.get(player).doped(a);
+    }
+
+    public void scored(boolean teamA, boolean teamB) {
+        if(teamA && teamB) {
+            stage.animation.blinkBoth();
+        } else if(teamA) {
+            stage.animation.blinkGreen();
+        } else if(teamB) {
+            stage.animation.blinkRed();
+        }
     }
 }

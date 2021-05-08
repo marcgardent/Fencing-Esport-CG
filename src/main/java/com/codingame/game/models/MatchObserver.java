@@ -4,7 +4,7 @@ public interface MatchObserver {
 
     void playerTired(PlayerModel player);
 
-    void scored(TeamModel team);
+    void touched(boolean teamA, boolean teamB);
 
     void outside(PlayerModel player);
 

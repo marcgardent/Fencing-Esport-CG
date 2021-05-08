@@ -41,13 +41,11 @@ public class MatchModel {
         }
         if (!legalMoveA) {
             state.teamB.score += 1;
-            observer.scored(state.teamB);
             state.restart = true;
 
         }
         if (!legalMoveB) {
             state.teamB.score += 1;
-            observer.scored(state.teamB);
             state.restart = true;
         }
 
@@ -95,7 +93,6 @@ public class MatchModel {
             state.teamB.player.touched = isTouched(state.teamA, actionA, state.teamB, actionB);
             if (state.teamB.player.touched) {
                 state.teamA.score += 1;
-                observer.scored(state.teamA);
             }
         } else if (actionB.distance < 0) {
             observer.defended(state.teamB.player, false);
@@ -105,10 +102,12 @@ public class MatchModel {
             state.teamA.player.touched = isTouched(state.teamB, actionB, state.teamA, actionA);
             if (state.teamA.player.touched) {
                 state.teamB.score += 1;
-                observer.scored(state.teamB);
             }
         } else if (actionA.distance < 0) {
             observer.defended(state.teamA.player, false);
+        }
+        if(state.teamA.player.touched|| state.teamB.player.touched) {
+            observer.touched(state.teamA.player.touched, state.teamB.player.touched);
         }
     }
 
