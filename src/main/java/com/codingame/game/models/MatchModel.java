@@ -35,8 +35,6 @@ public class MatchModel {
         boolean legalMoveB = state.teamB.player.applyMove(actionB);
 
         if (legalMoveA && legalMoveB) {
-            setPose(state.teamA, actionA);
-            setPose(state.teamA, actionB);
             resolveScores(actionA, actionB);
         }
         if (!legalMoveA) {
@@ -45,7 +43,7 @@ public class MatchModel {
 
         }
         if (!legalMoveB) {
-            state.teamB.score += 1;
+            state.teamA.score += 1;
             state.restart = true;
         }
 
@@ -135,11 +133,6 @@ public class MatchModel {
         }
     }
 
-    private void setPose(TeamModel team, ActionType action) {
-        if (action == ActionType.LEFT_POSTURE || action == ActionType.RIGHT_POSTURE || action == ActionType.MIDDLE_POSTURE) {
-            team.player.posture = action;
-        }
-    }
 
     public GameModel restart() {
         state.restart = false;
