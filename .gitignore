@@ -8,4 +8,3 @@ target/
 .review
 bin
 Boss.*
-Player*.java
